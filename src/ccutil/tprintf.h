@@ -2,7 +2,6 @@
  * File:        tprintf.h
  * Description: Trace version of printf - portable between UX and NT
  * Author:      Phil Cheatle
- * Created:     Wed Jun 28 15:01:15 BST 1995
  *
  * (C) Copyright 1995, Hewlett-Packard Ltd.
  ** Licensed under the Apache License, Version 2.0 (the "License");
@@ -26,7 +25,7 @@ namespace tesseract {
 
 // Main logging function.
 extern TESS_API void tprintf( // Trace printf
-    const char *format, ...); // Message
+    const char *format, ...) __attribute__((format(gnu_printf, 1, 2))); // Message
 
 } // namespace tesseract
 
